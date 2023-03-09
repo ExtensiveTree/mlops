@@ -1,2 +1,2 @@
-# mlops1
-first mlops homework
+# mlops
+mlops homework
