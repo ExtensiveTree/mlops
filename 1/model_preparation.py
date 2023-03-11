@@ -3,14 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import pickle
-import os
-
-
-def createDirs(dirNames):
-    for dirName in dirNames:
-        if not os.path.exists(dirName):
-            os.makedirs(dirName)
-
+from data_creation import createDirs
 
 df = pd.read_csv('./train/train_normal.csv', delimiter=',')
 train, quality = df.drop(columns='quality').values, df['quality'].values
