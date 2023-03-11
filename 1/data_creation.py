@@ -22,9 +22,9 @@ def create_data(data, train_file='train.csv', test_file='test.csv', ratio=0.8,):
 
 def write_to_csv_file(file_name, data, start, end):
 	with open(file_name, 'w') as f:
-		f.write(data[0] + ',\n')
+		f.write(data[0] + '\n')
 		for i in range(start, end):
-			f.write(data[i] + ',\n')
+			f.write(data[i] + '\n')
 
 
 def createDirs(dirNames):
