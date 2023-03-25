@@ -6,4 +6,4 @@ pickled_model = pickle.load(open("./model/pickle_model.pkl", 'rb'))
 norm_test = pd.read_csv('./test/test_norm.csv', delimiter=',')
 x, y = norm_test.drop(columns='quality').values, norm_test['quality'].values
 y_predict = pickled_model.predict(x)
-print(r2_score(y,y_predict))
+print(round(r2_score(y,y_predict),5))
